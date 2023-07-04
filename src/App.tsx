@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.css";
-import PlayerHowler from "./components/PlayerHowler/PlayerHowler";
-import PlayerHls from "./components/PlayerHls/PlayerHls";
-// import PlayerAudio from "./components/PlayerAudio/PlayerAudio";
+import DefaultLayout from "./layouts/DefaultLayout/DefaultLayout";
+import PlayerHowler from "./unused/components/PlayerHowler/PlayerHowler";
 
 function App() {
   return (
-    <div className="App">
-      {/* <PlayerAudio /> */}
-      <PlayerHowler />
-      {/* <PlayerHls /> */}
-    </div>
+    <DefaultLayout>
+      <div className="App">
+        {/* <PlayerAudio /> */}
+        <PlayerHowler />
+      </div>
+    </DefaultLayout>
   );
 }
 

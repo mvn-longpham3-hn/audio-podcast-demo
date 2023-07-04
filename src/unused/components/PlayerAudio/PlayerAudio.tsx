@@ -11,7 +11,7 @@ import React, {
   useState,
 } from "react";
 import Controller from "./Controller/Controller";
-import { Podcast } from "../../types/types";
+import { Podcast } from "../../../types/types";
 import { StyledPlayer } from "./PlayerAudio.styles";
 import PauseCircleOutlineRoundedIcon from "@mui/icons-material/PauseCircleOutlineRounded";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
@@ -59,6 +59,12 @@ const PlayerAudio: FC = () => {
         .then((data) => data.json())
         .then((data) => {
           setData(data.data);
+        });
+
+      await fetch("https://music-api-vip.vercel.app/api/song?id=ZW9BZ680")
+        .then((data) => data.json())
+        .then((data) => {
+          console.log({ data });
         });
     } catch (error) {}
   }, []);

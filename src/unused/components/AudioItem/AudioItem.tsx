@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react";
-import { Podcast } from "../../types/types";
+import { Podcast } from "../../../types/types";
 import { Box } from "@mui/material";
 interface AudioItemProps {
   data: Podcast;
